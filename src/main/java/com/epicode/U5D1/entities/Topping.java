@@ -1,17 +1,18 @@
 package com.epicode.U5D1.entities;
 
+import com.epicode.U5D1.Interface.ComponentiOrdine;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 
-public class Topping extends Item {
-	private String name;
+public class Topping extends Item  {
+
 
 	public Topping(String name, int calories, double price) {
-		super(calories, price);
-		this.name = name;
+		super(name,calories, price);
+
 	}
 
 	@Override
@@ -21,5 +22,10 @@ public class Topping extends Item {
 				", calories=" + calories +
 				", price=" + price +
 				'}';
+	}
+
+	@Override
+	public void stampaOrdine () {
+		System.out.println(this.name);
 	}
 }

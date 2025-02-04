@@ -1,4 +1,4 @@
-spring.application.name=U5-W2-D1
+spring.application.name=pizzeria-vesuvio
 
 logging.level.root=INFO
 logging.level.it.epicode.pizzeria_vesuvio.runners=INFO
@@ -7,3 +7,4 @@ logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %clr(%-5level){faint} [%thread] 
 
 ideatore.nome=Giuseppe Verdi
 costo.coperto=2.0
+

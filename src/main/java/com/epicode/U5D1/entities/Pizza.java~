@@ -7,6 +7,7 @@ import java.util.List;
 
 @Getter
 public class Pizza extends Item {
+	private String name;
 
 	private List<Topping> toppingList;
 	private boolean isXl = false;

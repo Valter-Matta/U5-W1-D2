@@ -6,11 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Drink extends Item {
-	private String name;
+
 
 	public Drink(String name, int calories, double price) {
-		super(calories, price);
-		this.name = name;
+		super(name,calories, price);
 	}
 
 	@Override
@@ -20,5 +19,10 @@ public class Drink extends Item {
 				", calories=" + calories +
 				", price=" + price +
 				'}';
+	}
+
+	@Override
+	public void stampaOrdine () {
+
 	}
 }
