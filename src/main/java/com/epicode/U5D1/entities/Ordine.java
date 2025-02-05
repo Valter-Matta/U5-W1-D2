@@ -4,7 +4,9 @@ import com.epicode.U5D1.Interface.ComponentiOrdine;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Value;
+
+import lombok.ToString;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalTime;
@@ -12,11 +14,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @NoArgsConstructor
-
 @Data
 @Component
 public class Ordine implements ComponentiOrdine {
-
 
 	private Tavolo tavolo;
 	private List<Item> componentiOrdine;
@@ -25,7 +25,7 @@ public class Ordine implements ComponentiOrdine {
 	private LocalTime oraOrdinazione;
 	private StatoOrdine statoOrdine;
 
-	//@Value ("${costo.coperto}")
+	@Value ("${costo.coperto}")
 	private double costoCoperto;
 
 	private double costoTotale;
@@ -55,6 +55,7 @@ public class Ordine implements ComponentiOrdine {
 
 	@Override
 	public void stampaOrdine () {
+		System.out.println("-----------------"+costoCoperto);
 		DateTimeFormatter formattata = DateTimeFormatter.ofPattern("HH:mm:ss");
 		System.out.println("Tavolo: "+ tavolo.getNumeroTavolo()+" Numero Ordine: "+ numeroOrdine+" Ora Ordinazione: "+ oraOrdinazione.format(formattata)+  " Totale: "+ costoTotale);
 		System.out.println("Consumazioni:");

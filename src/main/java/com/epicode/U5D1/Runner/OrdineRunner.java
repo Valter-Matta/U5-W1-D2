@@ -11,7 +11,6 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Service
-
 public class OrdineRunner implements CommandLineRunner {
 	@Autowired
 	@Qualifier ("pizza_margherita")
